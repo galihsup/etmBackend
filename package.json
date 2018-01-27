@@ -10,6 +10,7 @@
   "dependencies": {
     "body-parser": "*",
     "crypto": "0.0.3",
+    "excel-export": "^0.5.1",
     "express": "*",
     "image-saver-nodejs": "*",
     "jsonwebtoken": "*",
