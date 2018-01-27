@@ -5,10 +5,10 @@ function Connection() {
 
   this.init = function() {
     this.pool = mysql.createPool({
-      host: 'localhost',
-      user: 'root',
-      password: '',
-      database: 'etm'
+      host: 'yippytech.com',
+      user: 'galih_etm',
+      password: 'galih23',
+      database: 'galih_etm'
     });
   };
 
