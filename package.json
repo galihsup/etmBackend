@@ -1,0 +1,25 @@
+{
+  "name": "indoexplore",
+  "version": "1.0.0",
+  "description": "Tugas Akhir",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "*",
+    "crypto": "0.0.3",
+    "express": "*",
+    "image-saver-nodejs": "*",
+    "jsonwebtoken": "*",
+    "moment": "^2.18.1",
+    "mysql": "*",
+    "randomstring": "^1.1.5"
+  },
+  "author": "exodius35",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
