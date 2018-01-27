@@ -5,7 +5,7 @@ var connection = require('./connection');
 var jwt = require('jsonwebtoken');
 var app = express();
 var server = require('http').createServer(app);
-var port = process.env.PORT || 2323;
+var port = process.env.PORT || 2028;
 var config = require('./config');
 
 server.listen(port, function () {
