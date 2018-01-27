@@ -7,7 +7,9 @@ var app = express();
 var server = require('http').createServer(app);
 var port = process.env.PORT || 2028;
 var config = require('./config');
+var morgan = require('morgan')
 
+app.use(morgan('dev'))
 server.listen(port, function () {
   console.log('Server listening at port %d', port);
 });
