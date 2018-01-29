@@ -93,7 +93,7 @@ function Admin(){
     	  if (err) {
     		res.send({status: 400, message: 'Get failed'});
     	  }
-    	  else if(result.length!=0) {
+    	  else {
     		res.send({status: 200, message: 'Data successfully', data:result});
     	  }
       });
