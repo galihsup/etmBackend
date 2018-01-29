@@ -194,15 +194,15 @@ function Siswa() {
 
   this.searchData = function(req,res){
     connection.acquire(function(err, con) {
-      var creds = [req.params.key];
-      var query1 = 'SELECT * FROM etm_siswa WHERE etm_nama_siswa LIKE % ? %';
+      var creds = ['%'+req.params.key+'%'];
+      var query1 = 'SELECT * FROM etm_siswa WHERE etm_nama_siswa LIKE ?';
       con.query(query1, creds, function(err, result) {
       con.release();
       if (err) {
       res.send({status: 400, message: 'Get failed'});
       }
-      else if(result.length!=0) {
-      res.send({status: 200, message: 'Get Data Successfully', data: result[0]});
+      else {
+      res.send({status: 200, message: 'Get Data Successfully', data: result});
       }
       });
     });
