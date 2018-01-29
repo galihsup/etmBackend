@@ -85,5 +85,19 @@ function Admin(){
 			})
 		})
 	}
+
+	this.ambilData = function(req, res) {
+    connection.acquire(function(err, con) {
+      con.query('SELECT * FROM etm_jadwal_sms_marketing', function(err, result) {
+      con.release();
+    	  if (err) {
+    		res.send({status: 400, message: 'Get failed'});
+    	  }
+    	  else if(result.length!=0) {
+    		res.send({status: 200, message: 'Data successfully', data:result});
+    	  }
+      });
+    });
+  };
 }
 module.exports = new Admin();

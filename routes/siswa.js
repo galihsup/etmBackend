@@ -3,7 +3,7 @@ var siswa = require('../models/siswaModel');
 module.exports = {
   configure: function(app) {
     //Route siswa
-	
+  
     //Tambah siswa
     app.post('/siswa/add_siswa', function(req, res) {
       siswa.tambah_siswa(req.body,res);
@@ -22,6 +22,11 @@ module.exports = {
     //mengambil data siswa berdasarkan id
     app.get('/siswa/getdata/:id', function(req,res){
       siswa.ambilDataByID(req,res);
+    });
+
+    //mengambil data siswa berdasarkan search
+    app.get('/siswa/search_data/:key', function(req,res){
+      siswa.searchData(req,res);
     });
 
     //export data siswa

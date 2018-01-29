@@ -8,9 +8,14 @@ module.exports = {
     app.get('/sms/import_sms', function(req, res) {
       md_sms.sms(req,res);
     });
-	
-	app.get('/sms/export_sms', function(req, res) {
+  
+  app.get('/sms/export_sms', function(req, res) {
       md_sms.smsExp(req,res);
+    });
+
+  //mengambil data jadwal sms marketing
+    app.get('/sms/getdata', function(req,res){
+      md_sms.ambilData(req,res);
     });
   }
 };
