@@ -28,6 +28,9 @@ module.exports = {
     app.get('/siswa/search_data/:key', function(req,res){
       siswa.searchData(req,res);
     });
+    app.get('/siswa/search_data/', function(req,res){
+      siswa.ambilData(req,res);
+    });
 
     //export data siswa
     app.get('/siswa/export_siswa', function(req, res) {
