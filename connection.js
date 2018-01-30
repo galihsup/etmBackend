@@ -8,7 +8,8 @@ function Connection() {
       host: 'yippytech.com',
       user: 'galih_etm',
       password: 'galih23',
-      database: 'galih_etm'
+      database: 'galih_etm',
+      debug: true
     });
   };
 
